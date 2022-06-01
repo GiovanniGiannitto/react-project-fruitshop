@@ -25,23 +25,30 @@ code {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 200px 130px;
+  gap: 250px 150px;
+}
+.photoSize{
+  display: flex;
+  justify-content: center;  
 }
 
 .img-fruit {
-  width: 262px;
+
+  width: 100%;
   height: 214px;
 }
 
 .card {
   width: 262px;
   height: 326px;
+  
 }
 
 .description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: transparent;
 }
 
 .details-2 {

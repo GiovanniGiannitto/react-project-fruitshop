@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { UseCards } from "./UseCards";
 
 export function Card() {
-  const [data, setData] = useState();
+  const{data}=UseCards()
   const [details, setDetails] = useState(false);
 
   function openDetails() {
@@ -9,40 +10,19 @@ export function Card() {
     console.log(details);
   }
 
-  useEffect(() => {
-    fetch(`https://fruits-develhope.herokuapp.com/api`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        setData(json);
-        console.log(json);
-      });
-  }, []);
+
+  
 
   return (
-    /* MENU DETTAGLI ON CLICK */
+   
     <div className="container">
-      {details === true && (
-        <div className="details-2">
-          <div className="photo-description">
-            <img alt="" />
-            <div className="description-2"></div>
-          </div>
-
-          <div>prezzo</div>
-          <div>
-            <button>Chiudi</button>
-            <button>Acquista</button>
-          </div>
-        </div>
-      )}
+    
       {data &&
         data.fruits.slice(0, 8).map((element, index) => (
-          <div className="card" key={index}>
+          <div className="card  " key={index}>
             <div className=" max-w-sm rounded overflow-hidden shadow-lg">
-              <img
-                className="img-fruit w-full"
+              <img 
+                className=" photoSize img-fruit w-full"
                 src={element.image}
                 alt="Sunset in the mountains"
               />
