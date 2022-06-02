@@ -1,4 +1,5 @@
 import "./App.css";
+
 import { Card } from "./components/Card";
 import { useState, useEffect } from "react";
 import { UseCards } from "./components/UseCards";
@@ -35,13 +36,23 @@ import { UseCards } from "./components/UseCards";
 //   };
 // }
 
+import { Footer } from "./components/Footer";
+// import { Navbar } from "./component/Navbar";
+import { Landing } from "./pages/Landing";
+
 function App() {
   const {data} = UseCards()
   return (
+
     <div className="App">
       <Card
       data={data} 
       />
+
+    <div className="relative ">
+      {/* <Navbar /> */}
+      <Landing />
+      <Footer />
     </div>
   );
 }
