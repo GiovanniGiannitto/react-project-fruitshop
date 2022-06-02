@@ -12,7 +12,7 @@ export function Card() {
             <div className="description-container">
               <div className="description-2">{element.name}</div>
               <div className="text-gray-700 text-base description">
-                <p>Carbohydrates: {element.nutritions.carbohydrates} </p>
+                <p>Carbs: {element.nutritions.carbohydrates} </p>
                 <p>Proteins: {element.nutritions.protein} </p>
                 <p>Fat: {element.nutritions.fat} </p>
                 <p>Sugar: {element.nutritions.sugar} </p>
