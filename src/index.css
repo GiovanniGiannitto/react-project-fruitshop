@@ -1,3 +1,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.flex {
+  justify-content: space-between;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 250px 150px;
+}
+.photoSize {
+  display: flex;
+  justify-content: center;
+}
+
+.img-fruit {
+  width: 100%;
+  height: 214px;
+}
+
+.card {
+  width: 262px;
+  height: 326px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+}
+
+.description-2 {
+  font-size: 25px;
+}
+
+.description-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.details-2 {
+  position: absolute;
+  z-index: 1;
+  width: 684px;
+  height: 506px;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.details-button {
+  width: 148px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: #ffefa0;
+}
+
+.photo-description {
+  gap: 120px;
+  display: flex;
+  width: 369px;
+  height: 312px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.price-value {
+  margin-left: 1.5rem;
+}
+
