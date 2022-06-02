@@ -1,38 +1,21 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
+import { useFetch } from "../App";
 export function Card() {
-  const [data, setData] = useState();
-  const [details, setDetails] = useState(false);
-
-  function openDetails() {
-    setDetails(true);
-    console.log(details);
-  }
-
-  useEffect(() => {
-    fetch(`https://fruits-develhope.herokuapp.com/api`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        setData(json);
-        console.log(json);
-      });
-  }, []);
+  const { data, details, openMenu, closeMenu } = useFetch();
 
   return (
     /* MENU DETTAGLI ON CLICK */
     <div className="container">
-      {details === true && (
+      {details === true && data && (
         <div className="details-2">
           <div className="photo-description">
-            <img alt="" />
+            <img src={data.fruits.image} alt="" />
             <div className="description-2"></div>
           </div>
 
-          <div>prezzo</div>
+          <div>{data.price}</div>
           <div>
-            <button>Chiudi</button>
+            <button onClick={closeMenu}>Chiudi</button>
             <button>Acquista</button>
           </div>
         </div>
@@ -59,7 +42,7 @@ export function Card() {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  <button onClick={openDetails}>Dettagli</button>
+                  <button onClick={openMenu}>Dettagli</button>
                 </span>
               </div>
             </div>
