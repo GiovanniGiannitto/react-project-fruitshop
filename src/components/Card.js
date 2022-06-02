@@ -20,10 +20,12 @@ export function Card() {
             </div>
           </div>
 
-          <div className="price">Prezzo {element.price}€</div>
+          <div className="price">Prezzo <span className="price-value">{element.price}€</span></div>
           <div className="buttons">
-            <button onClick={closeMenu}>Chiudi</button>
-            <button>Acquista</button>
+            <button className="details-button" onClick={closeMenu}>
+              Chiudi
+            </button>
+            <button className="details-button">Acquista</button>
           </div>
         </div>
       )}

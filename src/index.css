@@ -53,10 +53,11 @@ code {
   font-size: 25px;
 }
 
-.description-container{
+.description-container {
   display: flex;
   gap: 20px;
   flex-direction: column;
+  width: 100%;
 }
 
 .details-2 {
@@ -77,6 +78,13 @@ code {
   margin-bottom: 3rem;
 }
 
+.details-button {
+  width: 148px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: #ffefa0;
+}
+
 .photo-description {
   gap: 120px;
   display: flex;
@@ -88,4 +96,8 @@ code {
   display: flex;
   flex-direction: row;
   margin-left: 2rem;
+}
+
+.price-value {
+  margin-left: 1.5rem;
 }
