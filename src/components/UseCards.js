@@ -5,6 +5,7 @@ export const UseCards = () => {
   const [nutrition, setNutrition] = useState();
   const [details, setDetails] = useState(false);
   const [element, setElement] = useState();
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch(`https://fruits-develhope.herokuapp.com/api`)
       .then((response) => {
@@ -25,6 +26,11 @@ export const UseCards = () => {
     setDetails(false);
   };
 
+  const buyItem = function buyItem() {
+    setCart([...cart]);
+    console.log(cart);
+  };
+
   return {
     nutrition,
     data,
@@ -32,5 +38,7 @@ export const UseCards = () => {
     closeMenu,
     details,
     element,
+    buyItem,
+    cart,
   };
 };

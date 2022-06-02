@@ -7,7 +7,6 @@ import { UseCards } from "./components/UseCards";
 // export function useFetch() {
 //   const [data, setData] = useState();
 //   const [details, setDetails] = useState(false);
-  
 
 //   const openMenu = function OpenDetails(data) {
 //     setDetails(true);
@@ -39,23 +38,20 @@ import { UseCards } from "./components/UseCards";
 import { Footer } from "./components/Footer";
 // import { Navbar } from "./component/Navbar";
 import { Landing } from "./pages/Landing";
+import { Homepage } from "./pages/Homepage";
 
 function App() {
-  const {data} = UseCards()
+  const { data } = UseCards();
   return (
-
     <div className="App">
+      <Homepage />
 
-      <Card
-      data={data} 
-      />
-
-    <div className="relative ">
+      {/* <div className="relative "> */}
       {/* <Navbar /> */}
-      <Landing />
-      <Footer />
+      {/* <Landing /> */}
+      {/* <Footer /> */}
+      {/* </div> */}
     </div>
-      </div>
   );
 }
 

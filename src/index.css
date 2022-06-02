@@ -11,7 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -66,11 +68,12 @@ code {
   z-index: 1;
   width: 684px;
   height: 506px;
-  border: 1px solid black;
+  border: 3px solid #f9cf93;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 2px;
 }
 
 .buttons {
@@ -103,3 +106,16 @@ code {
   margin-left: 1.5rem;
 }
 
+.homepage {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.card-component-container {
+  height: 1024px;
+}
+
+.px-6 {
+  text-align: center;
+}

@@ -3,11 +3,10 @@ import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { UseCards } from "./UseCards";
 export function Card() {
-  const { data, details, openMenu, closeMenu, element } = UseCards();
+  const { data, details, openMenu, closeMenu, element, buyItem, cart } = UseCards();
 
   return (
     <div className="container">
-      <Navbar/>
       {details === true && data && (
         <div className="details-2">
           <div className="photo-description">
@@ -23,12 +22,14 @@ export function Card() {
             </div>
           </div>
 
-          <div className="price">Prezzo <span className="price-value">{element.price}€</span></div>
+          <div className="price">
+            Prezzo <span className="price-value">{element.price}€</span>
+          </div>
           <div className="buttons">
             <button className="details-button" onClick={closeMenu}>
               Chiudi
             </button>
-            <button className="details-button">Acquista</button>
+            <button className="details-button" onClick={buyItem}>Acquista</button>
           </div>
         </div>
       )}
@@ -53,14 +54,16 @@ export function Card() {
                 </div>
               </div>
               <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                <span className="inline-block bg-[#F9CF93] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                   <button onClick={() => openMenu(element)}>Dettagli</button>
                 </span>
               </div>
+              
             </div>
+            
           </div>
         ))}
-        <Footer/>
     </div>
+    
   );
 }
