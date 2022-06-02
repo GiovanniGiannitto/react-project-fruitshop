@@ -45,6 +45,7 @@ function App() {
   return (
 
     <div className="App">
+
       <Card
       data={data} 
       />
@@ -54,6 +55,7 @@ function App() {
       <Landing />
       <Footer />
     </div>
+      </div>
   );
 }
 

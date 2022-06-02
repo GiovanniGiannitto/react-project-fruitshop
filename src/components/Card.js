@@ -1,10 +1,13 @@
 import React from "react";
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
 import { UseCards } from "./UseCards";
 export function Card() {
   const { data, details, openMenu, closeMenu, element } = UseCards();
 
   return (
     <div className="container">
+      <Navbar/>
       {details === true && data && (
         <div className="details-2">
           <div className="photo-description">
@@ -57,6 +60,7 @@ export function Card() {
             </div>
           </div>
         ))}
+        <Footer/>
     </div>
   );
 }
