@@ -27,13 +27,12 @@ code {
   flex-wrap: wrap;
   gap: 250px 150px;
 }
-.photoSize{
+.photoSize {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .img-fruit {
-
   width: 100%;
   height: 214px;
 }
@@ -41,7 +40,6 @@ code {
 .card {
   width: 262px;
   height: 326px;
-  
 }
 
 .description {
@@ -51,11 +49,43 @@ code {
   background-color: transparent;
 }
 
+.description-2 {
+  font-size: 25px;
+}
+
+.description-container{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
 .details-2 {
   position: absolute;
   z-index: 1;
-  width: 500px;
-  height: 500px;
+  width: 684px;
+  height: 506px;
   border: 1px solid black;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.photo-description {
+  gap: 120px;
+  display: flex;
+  width: 369px;
+  height: 312px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
 }

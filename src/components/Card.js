@@ -1,19 +1,27 @@
 import React from "react";
-import { useFetch } from "../App";
+import { UseCards } from "./UseCards";
 export function Card() {
-  const { data, details, openMenu, closeMenu } = useFetch();
+  const { data, details, openMenu, closeMenu, element } = UseCards();
 
   return (
     <div className="container">
       {details === true && data && (
         <div className="details-2">
           <div className="photo-description">
-            <img src={data.fruits.image} alt="" />
-            <div className="description-2"></div>
+            <img className="" src={element.image} alt="" />
+            <div className="description-container">
+              <div className="description-2">{element.name}</div>
+              <div className="text-gray-700 text-base description">
+                <p>Carbohydrates: {element.nutritions.carbohydrates} </p>
+                <p>Proteins: {element.nutritions.protein} </p>
+                <p>Fat: {element.nutritions.fat} </p>
+                <p>Sugar: {element.nutritions.sugar} </p>
+              </div>
+            </div>
           </div>
 
-          <div>{data.price}</div>
-          <div>
+          <div className="price">Prezzo {element.price}€</div>
+          <div className="buttons">
             <button onClick={closeMenu}>Chiudi</button>
             <button>Acquista</button>
           </div>
@@ -41,7 +49,7 @@ export function Card() {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  <button onClick={openMenu}>Dettagli</button>
+                  <button onClick={() => openMenu(element)}>Dettagli</button>
                 </span>
               </div>
             </div>
