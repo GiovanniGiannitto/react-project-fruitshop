@@ -9,10 +9,10 @@ export function useFetch() {
   const openMenu = function OpenDetails() {
     setDetails(true);
     console.log(details);
-  }
-  const closeMenu = function CloseDetails(){
-    setDetails(false)
-  }
+  };
+  const closeMenu = function CloseDetails() {
+    setDetails(false);
+  };
 
   useEffect(() => {
     fetch(`https://fruits-develhope.herokuapp.com/api`)
@@ -29,14 +29,19 @@ export function useFetch() {
     data,
     details,
     openMenu,
-    closeMenu
+    closeMenu,
   };
 }
 
 function App({ data, details, openMenu, closeMenu }) {
   return (
     <div className="App">
-      <Card data={data} details={details} openDetails={openMenu} closeDetails={closeMenu} />
+      <Card
+        data={data}
+        details={details}
+        openDetails={openMenu}
+        closeDetails={closeMenu}
+      />
     </div>
   );
 }

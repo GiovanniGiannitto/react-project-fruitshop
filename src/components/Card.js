@@ -4,7 +4,6 @@ export function Card() {
   const { data, details, openMenu, closeMenu } = useFetch();
 
   return (
-   
     <div className="container">
       {details === true && data && (
         <div className="details-2">
@@ -24,7 +23,7 @@ export function Card() {
         data.fruits.slice(0, 8).map((element, index) => (
           <div className="card  " key={index}>
             <div className=" max-w-sm rounded overflow-hidden shadow-lg">
-              <img 
+              <img
                 className=" photoSize img-fruit w-full"
                 src={element.image}
                 alt="Sunset in the mountains"
