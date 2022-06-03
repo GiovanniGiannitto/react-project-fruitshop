@@ -1,16 +1,31 @@
-import { data } from "autoprefixer";
 import React from "react";
-import { useState, useEffect } from "react";
 import { Card } from "../components/Card";
-import { useFetch } from "../App";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { UseCards } from "../components/UseCards";
 
 export function Homepage() {
+  const {
+    data,
+    details,
+    openMenu,
+    closeMenu,
+    element,
+    buyItem,
+    cart,
+    delItem,
+  } = UseCards();
   return (
-    <div className="homepage">
-      <Navbar />
-     <div className="card-component-container"> <Card className="card-component" /></div>
+    <div className="relative">
+      <Navbar cart={cart} delClick={delItem} />
+      <Card
+        data={data}
+        details={details}
+        openMenu={openMenu}
+        closeMenu={closeMenu}
+        element={element}
+        buyItem={buyItem}
+      />
       <Footer />
     </div>
   );
