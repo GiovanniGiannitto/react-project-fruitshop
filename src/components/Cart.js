@@ -4,12 +4,12 @@ export const Cart = ({ cartItems, closeBtn, deleteItem }) => {
   return (
     <div className="fixed w-full h-screen bg-gray-400 bg-opacity-50">
       <div className="flex mt-32 justify-center w-full h-full">
-        <div className="w-[40rem] h-64 relative bg-white border border-1 border-[#f9cf93]">
+        <div className="w-[40rem] h-[30rem] relative bg-white border border-1 border-[#f9cf93]">
           <h1 className="p-6">Carrello</h1>
-          <div className="border-y border-1 border-black h-20 overflow-auto">
+          <div className="border-y border-1 border-black h-70 overflow-auto">
             {cartItems &&
               cartItems.map((value, index) => (
-                <div className="flex w-full h-full justify-between" key={index}>
+                <div className="flex h-full justify-between" key={index}>
                   <div className="w-1/6 flex">
                     <img src={value.image} alt="fruit" />
                     <span className="my-auto ml-12">{value.name}</span>
